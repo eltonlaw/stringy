@@ -1,4 +1,6 @@
 (ns stringy.core
-  (:require [stringy.compare :as compare]))
+  (:require [clojure.template :as template]
+            [stringy.compare :as compare]))
 
-(def hamming-distance compare/hamming-distance)
+(template/do-template [x y] (def x y)
+  hamming-distance compare/hamming-distance)

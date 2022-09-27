@@ -3,4 +3,5 @@
             [stringy.compare :as compare]))
 
 (template/do-template [x y] (def x y)
-  hamming-distance compare/hamming-distance)
+  hamming-distance compare/hamming-distance
+  levenshtein-distance compare/levenshtein-distance)

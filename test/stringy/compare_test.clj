@@ -11,3 +11,13 @@
        1 "abcc" "abcd"
        0 "abcd" "abcd"
        4 "lawn" "flaw"))
+
+(deftest levenshtein-distance-test
+  (are [distance s1 s2]
+       (= distance
+          (compare/levenshtein-distance s1 s2))
+       1 "abcc" "abcd"
+       0 "abcd" "abcd"
+       2 "lawn" "flaw"
+       4 "lawn" "flowing"
+       3 "flowers" "fakers"))
